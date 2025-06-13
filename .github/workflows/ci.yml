@@ -9,6 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:  # ✅ Add this block at the job level
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
     steps:
       - uses: actions/checkout@v3
 
