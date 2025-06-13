@@ -1,0 +1,31 @@
+[allowlist]
+description = "Allowlist file for Gitleaks"
+paths = [
+    '''\.git/''',
+    '''\.github/''',
+    '''\.vscode/''',
+]
+
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key"
+regex = '''(?i)(api[_-]?key|apikey|secret)['"]?\s*[:=]\s*['"]?([a-zA-Z0-9]{32,45})['"]?'''
+tags = ["key", "API", "generic"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["key", "AWS"]
+
+[[rules]]
+id = "azure-storage-key"
+description = "Azure Storage Key"
+regex = '''[a-zA-Z0-9]{88}'''
+tags = ["key", "Azure"]
+
+[[rules]]
+id = "connection-string"
+description = "Database Connection String"
+regex = '''(?i)(connection[_-]?string|connstring)['"]?\s*[:=]\s*['"]?([^'"]+)['"]?'''
+tags = ["database", "connection"] 
