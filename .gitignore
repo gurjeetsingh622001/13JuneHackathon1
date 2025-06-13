@@ -1,0 +1,34 @@
+# Build results
+bin/
+obj/
+publish/
+.vs/
+*.user
+*.suo
+
+# User secrets
+**/secrets.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Sensitive config (if you use them)
+appsettings.Development.json
+appsettings.Local.json
+
+# Ignore all files in src/VulnerableApi/obj/
+src/VulnerableApi/obj/ 
