@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04  # ✅ FIXED here
+    runs-on: ubuntu-latest  # ✅ FIXED here
 
     steps:
       - uses: actions/checkout@v3
