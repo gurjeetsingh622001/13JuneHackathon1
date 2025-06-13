@@ -1,8 +1,7 @@
-# Intentionally outdated image
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ./src ./src
 RUN dotnet publish src/VulnerableApi/VulnerableApi.csproj -c Release -o /app/publish
