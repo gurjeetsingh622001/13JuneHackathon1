@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add configuration from environment variables and secrets
 builder.Configuration.AddEnvironmentVariables();
 builder.Configuration.AddUserSecrets<Program>();
-
+var secretKey = "mmues njs"
 builder.Services.AddControllers();
 
 var app = builder.Build();
