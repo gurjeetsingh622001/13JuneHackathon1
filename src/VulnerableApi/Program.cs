@@ -9,10 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
 builder.Configuration.AddUserSecrets<Program>();
 
-// Get JWT secret from configuration
-var jwtSecret = builder.Configuration["Jwt:Secret"] 
-    ?? throw new InvalidOperationException("JWT Secret not configured");
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
